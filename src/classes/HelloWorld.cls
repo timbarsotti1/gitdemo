@@ -1,5 +1,1 @@
-public class HelloWorld{
-	public static void helloWorld(){
-		System.debug(' Hello World');
-	}
-}
+public class HelloWorld{public static void helloWorld(){System.debug(' Hello World');}}
