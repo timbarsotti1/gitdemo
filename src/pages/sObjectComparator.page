@@ -1,0 +1,36 @@
+<apex:page showHeader="true" sidebar="true" controller="MigratorComparator"  docType="html-5.0">
+	<apex:form id="form">
+		<apex:pageBlock >
+<!--		<apex:pageBlockSection >
+				<apex:outputText value="{!ObjectsAreTheSame}" />
+			</apex:pageBlockSection>
+			<apex:pageBlockSection >
+				<apex:outputText value="{!TargetObject}" />
+			</apex:pageBlockSection>
+			<apex:pageBlockSection >
+				<apex:outputText value="{!SourceObject}" />
+			</apex:pageBlockSection> -->
+			<apex:pageBlockSection columns="2">
+			<apex:pageBlockTable value="{!sourceSObjects}" var="o">
+				<apex:column title="">
+					<apex:facet name="header"></apex:facet>
+					<apex:inputCheckbox value="{!o.Selected}" />
+				</apex:column>
+				<apex:column title="Name Space">
+					<apex:facet name="header">Name Space</apex:facet>
+					<apex:outputText value="{!o.NameSpace}" />
+				</apex:column>
+				<apex:column title="Object API Name">
+					<apex:facet name="header">Object API Name</apex:facet>
+					<apex:outputText value="{!o.Name}" />
+				</apex:column>
+				<apex:column title="Migration Order Number">
+					<apex:facet name="header">Migration Order Number</apex:facet>
+					<apex:input type="number" value="{!o.OrderNumber}" />
+				</apex:column>
+			</apex:pageBlockTable>
+			<apex:commandButton action="{!save}" title="Save" value="Save" reRender="form"/>
+		</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

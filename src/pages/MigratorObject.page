@@ -1,0 +1,19 @@
+<apex:page showHeader="true" sidebar="true" standardController="Migration_Object__c" extensions="MigratorObjectExt">
+<apex:pageMessages id="pm"/>
+	<apex:form id="theForm">
+		<apex:pageBlock >
+
+		<!--<apex:pageBlockSection >
+				<apex:selectList value="{!Migration_Object__c.sObject__c}" multiselect="false" size="1" required="true">
+					<apex:SelectOptions value="{!objects}">
+					</apex:SelectOptions>
+				</apex:selectList>
+				<apex:inputField value="{!Migration_Object__c.Order_Number__c}" required="true" />
+				<apex:inputField value="{!Migration_Object__c.Scenario__c}" />
+				<apex:inputField value="{!Migration_Object__c.Active__c}" />
+			</apex:pageBlockSection>
+			-->
+		</apex:pageBlock>
+		<apex:commandButton value="Save" action="{!save}" reRender="pm,theForm"/>
+	</apex:form>
+</apex:page>
