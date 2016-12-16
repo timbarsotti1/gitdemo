@@ -62,6 +62,7 @@ public with sharing class MetadataServiceExamples
         customObject.nameField.label = 'Test Record Upsert';
         customObject.deploymentStatus = 'Deployed';
         customObject.sharingModel = 'ReadWrite';
+        //this is my new comment
         List<MetadataService.UpsertResult> results =
             service.upsertMetadata(
                 new MetadataService.Metadata[] { customObject });
