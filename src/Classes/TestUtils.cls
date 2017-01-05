@@ -11,8 +11,8 @@
  */
 global class TestUtils {
     //my new comment from sublime - 
-    //new comment - now i am ready to commit
 
+    //another comment
     global static void assertConfirmMessagesExist(){ assertMessagesAtLevelExist(ApexPages.Severity.CONFIRM,true); }
     global static void assertInfoMessagesExist(){ assertMessagesAtLevelExist(ApexPages.Severity.INFO,true); }
     global static void assertWarningMessagesExist(){ assertMessagesAtLevelExist(ApexPages.Severity.WARNING,true); }
